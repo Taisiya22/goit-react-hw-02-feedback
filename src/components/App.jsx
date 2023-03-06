@@ -1,32 +1,8 @@
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template
-//     </div>
-//   );
-// };
 
 import { Component } from "react";
 import { FeedBackOptions } from "./FeedbackOptions/FeedbackOptions";
 import { Statistics } from "./Statistics/Statistics";
-
-// export function App() {
-//   return (
-//     <div>
-// <Statistics/>
-//     </div>
-//   )
-// }
-
+import { Section } from "./Section/Section";
 
 export class App extends Component {
  state = {
@@ -72,19 +48,21 @@ handleBadIncrement = () => {
   render() {
     return (
     <>
-      
+      <Section title = "Please leave feedback">
         <FeedBackOptions
           onGoodIncrement={this.handleGoodIncrement}
           onNeutralIncrement={this.handleNeutralIncrement}
           onBadIncrement={this.handleBadIncrement }
         />
-  
+        </Section>  
+            <Section title= "Statistics">
         <Statistics
           good={ this.state.good}
           neutral={this.state.neutral }
           bad={this.state.bad  }
           total={this.countTotalFeedback() }
-          positivePercentage={this. countPositiveFeedbackPercentage() }></Statistics>
+          positivePercentage={this.countPositiveFeedbackPercentage()}/>
+            </Section>        
         
     
     </>
