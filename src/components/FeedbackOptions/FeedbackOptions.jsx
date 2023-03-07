@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import css from './FeedbackOptions.module.css'
+import css from './FeedbackOptions.module.css';
 
 export const FeedBackOptions = ({
   onGoodIncrement,
@@ -20,7 +20,7 @@ export const FeedBackOptions = ({
 );
 
 FeedBackOptions.propTypes = {
-    onGoodIncrement: PropTypes.func.isRequired,
-    onNeutralIncrement: PropTypes.func.isRequired,
-    onBadIncrement: PropTypes.func.isRequired,
-}
+  onGoodIncrement: PropTypes.func.isRequired,
+  onNeutralIncrement: PropTypes.func.isRequired,
+  onBadIncrement: PropTypes.func.isRequired,
+};

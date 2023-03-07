@@ -3,7 +3,6 @@ import css from './Notification.module.css';
 
 export const Notification = ({ message }) => <p>{message}</p>;
 
-
 Notification.propTypes = {
-     message: PropTypes.string.isRequired,
-}
+  message: PropTypes.string.isRequired,
+};

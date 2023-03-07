@@ -14,13 +14,12 @@ export const Statistics = ({
     <p>Total: {total}</p>
     <p>Positive feedback: {positivePercentage}%</p>
   </div>
-)
+);
 
 Statistics.propTypes = {
-    good: PropTypes.number.isRequired,
-    neutral: PropTypes.number.isRequired,
-    bad: PropTypes.number.isRequired,
-    // total: PropTypes.number.isRequired,
-    // positivePercentag: PropTypes.number,
-   
-}
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  // total: PropTypes.number.isRequired,
+  // positivePercentag: PropTypes.number,
+};
