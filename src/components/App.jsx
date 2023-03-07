@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import {Helmet} from "react-helmet";
 import { FeedBackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
@@ -40,6 +41,12 @@ export class App extends Component {
   render() {
     return (
       <>
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>Feedback book</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="description" content="Testing icons and title" />
+            </Helmet>
         <Section title="Please leave feedback">
           <FeedBackOptions
             onGoodIncrement={this.handleGoodIncrement}
