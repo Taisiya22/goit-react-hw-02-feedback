@@ -33,3 +33,9 @@ export const FeedBackOptions = ({
 //   onNeutralIncrement: PropTypes.func.isRequired,
 //   onBadIncrement: PropTypes.func.isRequired,
 // };
+
+
+FeedBackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func.isRequired,
+  options: PropTypes.array.isRequired,
+}
