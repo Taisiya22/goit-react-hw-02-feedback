@@ -12,22 +12,28 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleGoodIncrement = () => {
+  handleIncrement = (options) => { 
     this.setState(prevState => ({
-      good: prevState.good + 1,
-    }));
-  };
+        [options]: prevState[options] + 1,
+    }))
+  }
+ 
+  // handleGoodIncrement = () => {
+  //   this.setState(prevState => ({
+  //     good: prevState.good + 1,
+  //   }));
+  // };
 
-  handleNeutralIncrement = () => {
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }));
-  };
-  handleBadIncrement = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
-    }));
-  };
+  // handleNeutralIncrement = () => {
+  //   this.setState(prevState => ({
+  //     neutral: prevState.neutral + 1,
+  //   }));
+  // };
+  // handleBadIncrement = () => {
+  //   this.setState(prevState => ({
+  //     bad: prevState.bad + 1,
+  //   }));
+  // };
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
     console.log(good)
@@ -50,9 +56,11 @@ export class App extends Component {
             </Helmet>
         <Section title="Please leave feedback">
           <FeedBackOptions
-            onGoodIncrement={this.handleGoodIncrement}
-            onNeutralIncrement={this.handleNeutralIncrement}
-            onBadIncrement={this.handleBadIncrement}
+            options={['good', 'neutral', 'bad']}
+            onLeaveFeedback={this.handleIncrement}
+            // onGoodIncrement={this.handleGoodIncrement}
+            // onNeutralIncrement={this.handleNeutralIncrement}
+            // onBadIncrement={this.handleBadIncrement}
           />
         </Section>
         <Section title="Statistics">
